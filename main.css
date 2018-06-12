@@ -1,0 +1,52 @@
+html,body{
+    padding:0;
+    margin:0;
+
+
+}
+.leftpart{
+    
+    color:black;
+}
+.child{
+    flex-grow: 1;
+    flex:1 1 auto;
+    width: 50%;
+    background: #eaeaea;
+    border:3px solid white;
+    padding:15px;
+    text-align: center;
+}
+.parent{
+    position: absolute;
+    top:50px;
+    bottom:0;
+    right:0;
+    width:50vw;
+}
+.wrapper{
+    flex:1;
+    display: flex;
+    height:calc(100vh - 50px);
+    flex-wrap: wrap;
+    justify-content: stretch;
+    
+    align-content: stretch;
+}
+nav{
+    margin-bottom: 0!important;
+}
+.btnWrapper{
+    text-align: center;
+
+}
+.proceed{
+    background:red;
+    margin-top:40px;
+    border:0;
+    box-shadow: 0;
+    padding:10px 40px;
+    background: #228ef3;
+    border-radius: 20px;
+    color:white;
+}
