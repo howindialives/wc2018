@@ -255,7 +255,8 @@ $("#winner").html(winner);
 
 var height=$("#statszone").height();
 var from_below=$(".footer").offset().top;
-$("#statszone").css("top",from_below-height)
+var mobff=$(window).width()>500?40:0;
+$("#statszone").css("top",from_below-height-mobff)
 
 function radiofy(cttx) {
     zee = $(cttx);
