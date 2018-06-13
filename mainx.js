@@ -251,7 +251,11 @@ $(`.f-${winner}`).attr("checked", true);
 $("#winner").html(winner);
 }
 
+//adjust the bottom box
 
+var height=$("#statszone").height();
+var from_below=$(".footer").offset().top;
+$("#statszone").css("top",from_below-height)
 
 function radiofy(cttx) {
     zee = $(cttx);
