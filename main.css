@@ -57,6 +57,10 @@ span.flag-icon{
     left:0;
     width:50vw;
 }
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 0;
+}
 .wrapper{
     flex:1;
     display: flex;
@@ -100,7 +104,7 @@ background: rgb(46, 148, 231)
 .panel{
     display:flex;
     flex-direction: column;
-    height:calc(90vh - 50px);
+    height:calc(100vh - 50px);
     justify-content: space-around;
 }
 .bloc{
@@ -110,7 +114,9 @@ background: rgb(46, 148, 231)
     display: flex;
     border:2px solid white;
 }
-
+table{
+    border:2px solid black;
+}
 #statszone{
     position: absolute;
     bottom:0;
@@ -121,6 +127,12 @@ background: rgb(46, 148, 231)
 .bloc>div{
     flex:1 1 auto;
     transform:translateY(10%);
+}
+div.checkbox{
+    margin: 0!important;
+}
+.first_picked{
+    margin-right:4px;
 }
 @media only screen and (max-width: 900px) {
     .parent{
@@ -140,9 +152,7 @@ background: rgb(46, 148, 231)
     .bloc{
         min-height: initial;
     }
-    .checkbox{
-        margin: 0;
-    }
+    
     .bloc>div{
         transform: initial;
     }
@@ -157,9 +167,7 @@ background: rgb(46, 148, 231)
         bottom:initial;
 
     }
-    table{
-        border:2px solid black;
-    }
+    
     h3{
         font-size: 14px;
         background:rgb(255, 255, 97);

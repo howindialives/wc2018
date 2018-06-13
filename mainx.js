@@ -3,7 +3,7 @@ var divB = document.querySelector("#b");
 var connector = document.querySelector("#connector");
 
 var drawConnector = function (from, to, nu) {
-    var mobf=$(window).width()<500?0.5:1;
+    var mobf=$(window).width()<500?0.3:1;
     var posnA = {
         x: from.offset().left + from.width(),
         y: from.offset().top + from.height() / 2
