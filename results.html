@@ -17,8 +17,11 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">World Cup 2018</a>
+                <a class="navbar-brand" href="/">Knockout Stage</a>
             </div>
+            <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">About HIL Scores</a></li>
+            </ul>
 
         </div>
     </nav>
@@ -210,12 +213,42 @@
                         </tbody>
                       </table>
         </div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About HIL Scores</h4>
+                </div>
+                <div class="modal-body">
+                        <p>HIL Score assigns a score to each team in a matchup. This is a weighted total of 3 things:</p>
+                        <ol>
+                        <li>Showing on the big stage: Performance in the last 4 World Cups, with weightages increasing with progression in the tournament.</li>
+                        
+                        <li>Recent form: Performance in the last 4 years, with the weight assigned being at the same level as a World Cup group match</li>
+                        
+                        <li>Record against opponent:  A mark-up in weights over 1 and 2.</li>
+                        </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 
     </div>
-
+<div class="col-xs-12 footer">
+    <div class="container">
+        <p>For every matchup, we have computed a weighted score for each team based on three things: performance in the last 4 World Cups, performance in the last 4 years and head-to-head record against the designated opponent. The selection shown is based on this composite score; the higher the score, the better a team’s chances. But you make your picks by clicking on the check-boxes, and see how your team’s chances change.</p>
+</div>
+</div>
     <!-- jQuery JS 2.2.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

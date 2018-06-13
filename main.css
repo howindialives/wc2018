@@ -5,12 +5,15 @@ html,body{
     padding:0;
     margin:0;
     font-family: Karla,'sans-serif';
-
+overflow-x:hidden;
 
 }
 .rightpart{
     
     color:black;
+}
+.rightpart p{
+    text-align: justify;
 }
 .child{
     flex-grow: 1;
@@ -122,8 +125,13 @@ table{
     bottom:0;
     right:0;
     padding:30px;
+    
 }
-
+.footer{
+    background:#eaeaea;
+    color:#333;
+    padding:20px 30px;
+}
 .bloc>div{
     flex:1 1 auto;
     transform:translateY(10%);
