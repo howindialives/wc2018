@@ -126,8 +126,8 @@ $(".bloc").hover(function(){
     t1=$(j[0]).data("name");
     t2=$(j[1]).data("name");
     var results=TESTDATA.find(x => ((x.A == t1 && x.B==t2)||(x.A==t2 && x.B==t1))),t1,t2;
-    $("#team_a").html(results.A);$("#team_b").html(results.B);
-    $("#score_a").html(results.z);$("#score_b").html(results.z2);
+    $("#team_a").html(results.A.substring(0,3).toUpperCase());$("#team_b").html(results.B.substring(0,3).toUpperCase());
+    $("#score_a").html(Math.round(results.z*100)/100);$("#score_b").html(Math.round(results.z2*100)/100);
     $("#rank_a").html(results.rankA);$("#rank_b").html(results.rankB);
 });
 

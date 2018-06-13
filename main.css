@@ -153,10 +153,16 @@ background: rgb(46, 148, 231)
         font-size:0.8em;
         padding:10px;
         top:15vh;
+        
+        bottom:initial;
 
+    }
+    table{
+        border:2px solid black;
     }
     h3{
         font-size: 14px;
+        background:rgb(255, 255, 97);
     }
     .panel{
         height:100vh;
