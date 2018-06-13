@@ -170,9 +170,9 @@ div.checkbox{
     #statszone{
         font-size:0.8em;
         padding:10px;
-        top:15vh;
+        bottom:-25vh;
         
-        bottom:initial;
+        
 
     }
     

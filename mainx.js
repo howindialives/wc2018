@@ -248,7 +248,7 @@ createWinner(final)
 function createWinner(finalcopy){
 winner = finalcopy[0].checked==0?finalcopy[0].first:finalcopy[0].second;
 $(`.f-${winner}`).attr("checked", true);
-console.log(winner+" is the winner!");
+$("#winner").html(winner);
 }
 
 
