@@ -98,6 +98,13 @@ background: rgb(46, 148, 231)
     border:2px solid white;
 }
 
+#statszone{
+    position: absolute;
+    bottom:0;
+    right:0;
+    padding:30px;
+}
+
 .bloc>div{
     flex:1 1 auto;
     transform:translateY(10%);

@@ -89,7 +89,7 @@ var mapper = {
 }
 function beautify(seed, cla) {
 
-    return `<span class="flag-icon flag-icon-${mapper[seed]}"></span><br/>${seed}<div class="checkbox">
+    return `<span class="flag-icon flag-icon-${mapper[seed]}"></span><br/><span class="team_name">${seed}</span><div class="checkbox">
     <label>
         <input class="${cla}-${seed}" onclick="${cla}_clicked(this);" type="checkbox" value="${seed}">
     </label>
@@ -119,6 +119,16 @@ function compare(b1,b2,cla){
     $(`.${cla}-${f2}`).attr("checked", true);
     return {first:f1,second:f2,checked:pickOne(f1,f2)};
 }
+
+$(".bloc").hover(function(){
+    j=$(this).find(".team_name");
+    t1=$(j[0]).text();
+    t2=$(j[1]).text();
+    var results=TESTDATA.find(x => ((x.A == t1 && x.B==t2)||(x.A==t2 && x.B==t1))),t1,t2;
+    $("#team_a").html(results.A);$("#team_b").html(results.B);
+    $("#score_a").html(results.z);$("#score_b").html(results.z2);
+    $("#rank_a").html(results.rankA);$("#rank_b").html(results.rankB);
+});
 
 function pickOne(t1,t2){
    const source=TESTDATA.find(x => ((x.A == t1 && x.B==t2)||(x.A==t2 && x.B==t1)));
