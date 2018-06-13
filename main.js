@@ -1,8 +1,19 @@
-var limit = 1;
+
+result={"Group A":{"first":"Uruguay","second":"Egypt"},"Group B":{"first":"Portugal","second":"Spain"},"Group C":{"first":"France","second":"Denmark"},"Group D":{"first":"Argentina","second":"Nigeria"},"Group E":{"first":"Brazil","second":"Switzerland"},"Group F":{"first":"Germany","second":"Mexico"},"Group G":{"first":"Belgium","second":"England"},"Group H":{"first":"Poland","second":"Colombia"}};
+assignFirstandSecond(result);
 $('div.checkbox input').on('change', function(evt) {
    zee=$(this);
    var group=zee.parent().parent().parent().parent().parent();
-   if(group.find(":checked").length>2)this.checked=false;
+   var group_id=group.attr("id").split("-")[1];
+    if(group.find(":checked").length>2){
+        this.checked=false;
+        return;
+    }
+    if(group.find(":checked").length==1)result[`Group ${group_id}`]={first:group.find(":checked").val(),second:null};   
+   
+    if(group.find(":checked").length==0)result[`Group ${group_id}`]={first:null,second:null};
+    if(group.find(":checked").length==2)result[`Group ${group_id}`].second=zee.val();
+assignFirstandSecond(result);
 });
 
 function crossverify(){
@@ -11,14 +22,21 @@ function crossverify(){
         return;
     }
     else{
-        result={}
-        $(".grp").each((i,v)=>{
-            var grpnum=$(v).find("h5").text();
-            var first=$(v).find(":checked").eq(0).val()
-            var second=$(v).find(":checked").eq(1).val()
-            result[grpnum]={first:first,second:second};
-        })
         localStorage.setItem("preferences",JSON.stringify(result));
         window.location='results.html'
     }
 }
+
+
+
+function assignFirstandSecond(resultcopy){
+    //assign first and second
+    for(grp in resultcopy){
+        var data=resultcopy[grp];
+        var classname="grp-"+grp.split(" ")[1];
+        
+        $(`.${classname}`).find(".first_picked").html(data.first||"NA")
+        $(`.${classname}`).find(".second_picked").html(data.second||"NA")
+    }
+}
+

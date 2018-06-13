@@ -19,7 +19,7 @@
                 <a class="navbar-brand" href="#">World Cup 2018</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">About HIL Scores</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">About HIL Scores</a></li>
             </ul>
 
         </div>
@@ -36,8 +36,9 @@
         <div class="parent">
             <div class="wrapper">
 
-                <div class="child grp">
+                <div class="child grp grp-A" id="grp-A">
                     <h5>Group A</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -77,8 +78,9 @@
                 </div>
 
 
-                <div class="child grp">
+                <div class="child grp grp-B" id="grp-B">
                     <h5>Group B</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -118,8 +120,9 @@
                 </div>
 
 
-                <div class="child grp">
+                <div class="child grp grp-C" id="grp-C">
                     <h5>Group C</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -159,8 +162,9 @@
                 </div>
 
 
-                <div class="child grp">
+                <div class="child grp grp-D" id="grp-D">
                     <h5>Group D</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -198,8 +202,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="child grp">
+                <div class="child grp grp-E" id="grp-E">
                     <h5>Group E</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -237,8 +242,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="child grp">
+                <div class="child grp grp-F" id="grp-F">
                     <h5>Group F</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -276,8 +282,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="child grp">
+                <div class="child grp grp-G" id="grp-G">
                     <h5>Group G</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -315,8 +322,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="child grp">
+                <div class="child grp grp-H" id="grp-H">
                     <h5>Group H</h5>
+                    <div class="positions">1st: <span class="first_picked"></span> 2nd: <span class="second_picked"></span></div>
                     <div class="row">
                         <div class="col-md-5 col-xs-12">
                             <div class="checkbox">
@@ -361,7 +369,26 @@
             
         </div>
 
-
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
 
     </div>
 

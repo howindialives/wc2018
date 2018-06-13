@@ -3,6 +3,7 @@ var divB = document.querySelector("#b");
 var connector = document.querySelector("#connector");
 
 var drawConnector = function (from, to, nu) {
+    var mobf=$(window).width()<500?0.5:1;
     var posnA = {
         x: from.offset().left + from.width(),
         y: from.offset().top + from.height() / 2
@@ -16,8 +17,8 @@ var drawConnector = function (from, to, nu) {
         "M" +
         (posnA.x) + "," + (posnA.y) + " " +
         "C" +
-        (posnA.x + 100) + "," + (posnA.y) + " " +
-        (posnB.x - 100) + "," + (posnB.y) + " " +
+        (posnA.x + 100*mobf) + "," + (posnA.y) + " " +
+        (posnB.x - 100*mobf) + "," + (posnB.y) + " " +
         (posnB.x) + "," + (posnB.y);
     console.log(dStr);
     document.querySelector("#conn" + nu).setAttribute("d", dStr);
@@ -89,7 +90,7 @@ var mapper = {
 }
 function beautify(seed, cla) {
 
-    return `<span class="flag-icon flag-icon-${mapper[seed]}"></span><br/><span class="team_name">${seed}</span><div class="checkbox">
+    return `<span class="flag-icon timflag flag-icon-${mapper[seed]}"></span><br/><span data-name="${seed}" class="team_name">${seed.substring(0,3).toUpperCase()}</span><div class="checkbox">
     <label>
         <input class="${cla}-${seed}" onclick="${cla}_clicked(this);" type="checkbox" value="${seed}">
     </label>
@@ -122,8 +123,8 @@ function compare(b1,b2,cla){
 
 $(".bloc").hover(function(){
     j=$(this).find(".team_name");
-    t1=$(j[0]).text();
-    t2=$(j[1]).text();
+    t1=$(j[0]).data("name");
+    t2=$(j[1]).data("name");
     var results=TESTDATA.find(x => ((x.A == t1 && x.B==t2)||(x.A==t2 && x.B==t1))),t1,t2;
     $("#team_a").html(results.A);$("#team_b").html(results.B);
     $("#score_a").html(results.z);$("#score_b").html(results.z2);

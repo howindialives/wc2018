@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 
 html,body{
     padding:0;
@@ -21,6 +21,15 @@ html,body{
     padding:15px;
     white-space: nowrap;
 
+}
+.grp h5{
+    font-weight: 800;
+}
+.positions{
+    font-size:0.8em;
+    font-weight: 800;
+    background:rgb(250, 250, 105);
+    display: inline-block;
 }
 .child.btnWrapper{
     flex:1 0.2 auto;
@@ -125,11 +134,32 @@ background: rgb(46, 148, 231)
     .proceed{
         margin:20px 0;
     }
-    .panel{
-        all:initial;
+   
+    
+    
+    .bloc{
+        min-height: initial;
     }
-    svg.svg{
-        display: none;
+    .checkbox{
+        margin: 0;
+    }
+    .bloc>div{
+        transform: initial;
+    }
+    .wrapper{
+        height:calc(120vh);
+    }
+    #statszone{
+        font-size:0.8em;
+        padding:10px;
+        top:15vh;
+
+    }
+    h3{
+        font-size: 14px;
+    }
+    .panel{
+        height:100vh;
     }
 
 }
