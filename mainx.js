@@ -34,6 +34,8 @@ fetch('test.json')
     TESTDATA=myJson;
     create_r16_recipe();
   });
+
+  function drawLines(){
 drawConnector($("#g1"), $("#q1"), 1);
 drawConnector($("#g2"), $("#q1"), 2);
 
@@ -54,6 +56,11 @@ drawConnector($("#q4"), $("#s2"), 12);
 
 drawConnector($("#s1"), $("#f"), 13);
 drawConnector($("#s2"), $("#f"), 14);
+  }
+  drawLines();
+  $(window).on("resize", function () {
+    drawLines();
+});
 var mapper = {
     "Brazil": "br",
     "Germany": "de",
