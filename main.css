@@ -87,19 +87,20 @@ background: rgb(46, 148, 231)
 .panel{
     display:flex;
     flex-direction: column;
-    height:calc(100vh - 50px);
+    height:calc(90vh - 50px);
     justify-content: space-around;
 }
 .bloc{
     text-align: center;
     background:#eaeaea;
-    min-height:80px;
+    min-height:50px;
     display: flex;
-
+    border:2px solid white;
 }
 
 .bloc>div{
     flex:1 1 auto;
+    transform:translateY(10%);
 }
 @media only screen and (max-width: 900px) {
     .parent{
@@ -113,4 +114,11 @@ background: rgb(46, 148, 231)
     .proceed{
         margin:20px 0;
     }
+    .panel{
+        all:initial;
+    }
+    svg.svg{
+        display: none;
+    }
+
 }

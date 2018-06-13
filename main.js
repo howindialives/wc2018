@@ -1,6 +1,5 @@
 var limit = 1;
 $('div.checkbox input').on('change', function(evt) {
-    console.log("hello")
    zee=$(this);
    var group=zee.parent().parent().parent().parent().parent();
    if(group.find(":checked").length>2)this.checked=false;
@@ -20,5 +19,6 @@ function crossverify(){
             result[grpnum]={first:first,second:second};
         })
         localStorage.setItem("preferences",JSON.stringify(result));
+        window.location='results.html'
     }
 }
