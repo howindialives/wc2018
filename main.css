@@ -53,18 +53,16 @@ svg{
 span.flag-icon{
     margin:0 3px;
 }
+
 .parent{
-    position: absolute;
-    top:50px;
-    bottom:0;
-    left:0;
-    width:50vw;
+    
 }
 .table>thead>tr>th {
     vertical-align: bottom;
     border-bottom: 0;
 }
 .wrapper{
+    
     flex:1;
     display: flex;
     height:calc(100vh - 50px);
@@ -100,10 +98,7 @@ background: rgb(46, 148, 231)
     display: inline-block;
 
 }
-.container{
-    margin-left: 0;
-    padding-left: 0;
-}
+
 .panel{
     display:flex;
     flex-direction: column;
@@ -143,11 +138,7 @@ div.checkbox{
     margin-right:4px;
 }
 @media only screen and (max-width: 900px) {
-    .parent{
-        position: relative;
-        width:100vw;
-        top:0;
-    }
+    
     .wrapper{
         height: auto;
     }
