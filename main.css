@@ -33,6 +33,7 @@ overflow-x:hidden;
     font-weight: 800;
     background:rgb(250, 250, 105);
     display: inline-block;
+    margin:15px 0px;
 }
 .child.btnWrapper{
     flex:1 0.2 auto;
@@ -137,6 +138,9 @@ div.checkbox{
 .first_picked{
     margin-right:4px;
 }
+.positions div{
+    display: inline-block;
+}
 @media only screen and (max-width: 900px) {
     
     .wrapper{
@@ -144,6 +148,9 @@ div.checkbox{
     }
     .proceed{
         margin:20px 0;
+    }
+    .positions div{
+        display: block;
     }
    
     
