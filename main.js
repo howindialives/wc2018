@@ -1,5 +1,5 @@
 
-result={"Group A":{"first":"Uruguay","second":"Egypt"},"Group B":{"first":"Portugal","second":"Spain"},"Group C":{"first":"France","second":"Denmark"},"Group D":{"first":"Argentina","second":"Nigeria"},"Group E":{"first":"Brazil","second":"Switzerland"},"Group F":{"first":"Germany","second":"Mexico"},"Group G":{"first":"Belgium","second":"England"},"Group H":{"first":"Poland","second":"Colombia"}};
+result={"Group A":{"first":"Uruguay","second":"Russia"},"Group B":{"first":"Spain","second":"Portugal"},"Group C":{"first":"France","second":"Denmark"},"Group D":{"first":"Croatia","second":"Argentina"},"Group E":{"first":"Brazil","second":"Switzerland"},"Group F":{"first":"Sweden","second":"Mexico"},"Group G":{"first":"Belgium","second":"England"},"Group H":{"first":"Colombia","second":"Japan"}};
 assignFirstandSecond(result);
 $('div.checkbox input').on('change', function(evt) {
    zee=$(this);
